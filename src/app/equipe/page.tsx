@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
@@ -118,7 +119,17 @@ export default function Equipe() {
 
             <FadeIn delay={120}>
               <div className="overflow-hidden rounded-xl border border-border bg-surface">
-                <div className="flex items-center justify-between gap-3 border-b border-border px-5 py-2.5">
+                {/* Retrato do responsável técnico — abre o cartão de credenciais */}
+                <Image
+                  src="/equipe/vitor.jpg"
+                  alt="Retrato de Vitor Luconi Rosenhaim"
+                  width={1197}
+                  height={800}
+                  sizes="(min-width: 1024px) 33vw, 100vw"
+                  className="aspect-[3/2] w-full select-none object-cover"
+                />
+
+                <div className="flex items-center justify-between gap-3 border-y border-border px-5 py-2.5">
                   <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                     <span
                       aria-hidden="true"
